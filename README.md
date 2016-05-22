@@ -13,4 +13,8 @@ Usage of ./cmdpool:
 ~~~
 
 Examples
-`./cmdpool -workers 3 -dir /tmp -cmd "echo {filename}; sleep 3"`.
+========
+
+~~~
+./cmdpool -workers 3 -dir /tmp -cmd "echo {filename}; sleep 3"
+~~~
