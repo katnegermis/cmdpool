@@ -82,7 +82,7 @@ func main() {
 				if err != nil {
 					fmt.Println(err)
 				}
-				fmt.Printf("File name \"%s\":\n\t%s", fileName, out.String())
+				fmt.Printf("File name \"%s\":\n\t%s\n", fileName, out.String())
 			}
 			wg.Done()
 		}()
