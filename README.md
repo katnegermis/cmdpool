@@ -1,4 +1,4 @@
-Run commands in your shell using a pool of workers.
+Run commands in your shell over a directory of files, using a pool of workers.
 
 Usage
 =====
@@ -13,6 +13,4 @@ Usage of ./cmdpool:
 ~~~
 
 Examples
-~~~
-./cmdpool -workers 50 -path /tmp -cmd "./tool {filepath}"
-~~~
+`./cmdpool -workers 50 -path /tmp -cmd "./tool {filepath}` runs `tool` on all files in `/tmp`, using 50 concurrent workers.
