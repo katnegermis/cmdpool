@@ -67,7 +67,7 @@ func getCmdArr(fileName string) []string {
 func main() {
 	parseFlags()
 
-	fnChan := make(chan string)
+	fnChan := make(chan string, workers)
 
 	wg := sync.WaitGroup{}
 	wg.Add(workers)
