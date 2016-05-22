@@ -13,4 +13,4 @@ Usage of ./cmdpool:
 ~~~
 
 Examples
-`./cmdpool -workers 50 -path /tmp -cmd "./tool {filepath}` runs `tool` on all files in `/tmp`, using 50 concurrent workers.
+`./cmdpool -workers 3 -dir /tmp -cmd "echo {filename}; sleep 3"`.

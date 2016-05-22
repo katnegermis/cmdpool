@@ -57,7 +57,7 @@ func getFiles() []string {
 func getCmdArr(fileName string) []string {
 	_cmd := strings.Replace(cmd, fileNameSymb, fileName, -1)
 	_cmd = strings.Replace(_cmd, filePathSymb, path.Join(dir, fileName), -1)
-	cmdArr, err := shellwords.Parse(_cmd)
+	cmdArr, err := shellwords.Parse(fmt.Sprintf("sh -c \"%s\"", _cmd))
 	if err != nil {
 		log.Fatal(err)
 	}
