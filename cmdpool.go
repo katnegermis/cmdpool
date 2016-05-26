@@ -55,7 +55,7 @@ func getFiles() []string {
 			log.Println(err)
 		}
 		for _, entry := range entries {
-			if entry.IsDir() {
+			if entry.IsDir() && recursive {
 				_getFiles(path.Join(dir, entry.Name()))
 			} else {
 				files = append(files, path.Join(dir, entry.Name()))
@@ -69,7 +69,7 @@ func getFiles() []string {
 
 func getCmdArr(filePath string) []string {
 	_cmd := strings.Replace(cmd, fileNameSymb, path.Base(filePath), -1)
-	_cmd = strings.Replace(_cmd, filePathSymb, path.Join(dir, filePath), -1)
+	_cmd = strings.Replace(_cmd, filePathSymb, filePath, -1)
 	cmdArr, err := shellwords.Parse(fmt.Sprintf("sh -c \"%s\"", _cmd))
 	if err != nil {
 		log.Fatal(err)
