@@ -5,11 +5,13 @@ Usage
 ~~~
 Usage of ./cmdpool:
   -cmd string
-        Command to run, {filepath} and {filename} will be substituded.
+        Command to run, {filepath} and {filename} will be substituded for files in 'dir'.
   -dir string
-        Path to files to run command on.
+        Dir containing files to run 'cmd' on.
+  -recursive
+        Whether 'dir' should be searched recursively.
   -workers int
-        Number of go routines to spawn cmd on. (default 4)
+        Number of go routines to spawn cmd on. (defaults to number of logical cores)
 ~~~
 
 Examples
